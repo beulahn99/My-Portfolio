@@ -1,0 +1,133 @@
+<!-- 
+    Name: Beulah Nwokotubo
+    File Name: index.html
+    Date Created: 29 Oct 2023
+    Section: 331
+    Description: Landing page for my portfolio.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Beulah Nwokotubo" />
+    <title>Landing Page</title>
+    <link rel="stylesheet" type="text/css" href="portfolio.css" />
+  </head>
+  <body>
+    <header>
+      <h1>
+        <img
+          src="images/my_logo.png"
+          alt="My Logo"
+          class="logo"
+          width="150"
+          height="140"
+        />Beulah Nwokotubo
+      </h1>
+    </header>
+
+    <nav class="container">
+      <ul id="sidemenu">
+        <li><a href="#top">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+      </ul>
+      <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+
+    <div class="rows">
+      <div class="col-1">
+        <h3>ABOUT ME</h3>
+        <p>
+          With a background in medicine and a passion for technology, I am a
+          dynamic individual who thrives on innovation. My journey has been
+          marked by adaptability and a commitment to growth. Whether working
+          collaboratively or otherwise, I'm driven by the quest for knowledge
+          and the pursuit of excellence.
+        </p>
+
+        <div class="tab-titles">
+          <p class="tab-links active-link" onclick="opentab('hobbies')">
+            Hobbies and Interests
+          </p>
+          <p class="tab-links" onclick="opentab('education')">Education</p>
+        </div>
+
+        <div class="tab-contents active-tab" id="hobbies">
+          <ul>
+            <li>Yoga</li>
+            <li>Painting</li>
+            <li>Philosophy</li>
+            <li>Psychology</li>
+            <li>Data Science</li>
+            <li>AI and Machine Learning</li>
+            <li>Community Service</li>
+          </ul>
+        </div>
+
+        <div class="tab-contents" id="education">
+          <p>
+            <a href="https://www.algonquincollege.com/">Algonquin College</a> -
+            Computer Programming Diploma (2023 - 2025)
+          </p>
+          <p>
+            <a href="https://knmu.edu.ua/en/"
+              >Kharkiv National Medical University</a
+            >
+            - Doctor of Medicine (2015 - 2021)
+          </p>
+        </div>
+      </div>
+
+      <div class="col-2">
+        <div class="indeximg">
+          <img
+            src="images/3d-business-young-woman-chatting-online.png"
+            alt="3D Professional Woman"
+          />
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Beulah Nwokotubo Copyright 2023</p>
+      <a href="#top">Top</a>
+    </footer>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+
+      function openmenu() {
+        sidemenu.style.right = "0";
+      }
+
+      function closemenu() {
+        sidemenu.style.right = "-200px";
+      }
+    </script>
+    <script
+      src="https://kit.fontawesome.com/280694457b.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

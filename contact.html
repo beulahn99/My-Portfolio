@@ -1,0 +1,94 @@
+<!-- 
+    Name: Beulah Nwokotubo
+    File Name: contact.html
+    Date Created: 29 Oct 2023
+    Section: 331
+    Description: Contact page and form for my portfolio.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Beulah Nwokotubo">
+    <title>Contact Form</title>
+    <link rel="stylesheet" type="text/css" href="portfolio.css">
+  </head>
+
+  <nav class="container">
+    <ul id="sidemenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+    </ul>
+    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+  </nav>
+
+  <div id="contact">
+    <div class="container">
+      <div class="rows">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Me</h1>
+          <p><i class="fa-solid fa-paper-plane"></i> beulahemail@gmail.com</p>
+          <p><i class="fa-solid fa-square-phone"></i> 012345678</p>
+          <div class="social-icons">
+            <a href="https://facebook.com"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="https://twitter.com"
+              ><i class="fa-brands fa-square-x-twitter"></i
+            ></a>
+            <a href="https://instagram.com"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://linkedin.com"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </div>
+          <a
+            href="images/computer_programming_resume.pdf"
+            download
+            class="btn btn2"
+            >Download CV</a
+          >
+        </div>
+        <div class="contact-right">
+          <form id="contactform">
+            <input 
+            type="text" 
+            name="name" 
+            required placeholder="Your Name">
+
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="Your Email">
+
+            <textarea
+              name="message"
+              required
+              placeholder="Your Message"
+              rows="8">
+            </textarea>
+
+            <button type="submit" class="btn btn2">Submit</button>
+            <button type="reset" class="btn btn2">Clear</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Beulah Nwokotubo Copyright 2023</p>
+    <a href="#top">Top</a>
+  </footer>
+
+  <script
+    src="https://kit.fontawesome.com/280694457b.js"
+    crossorigin="anonymous">
+  </script>
+</html>

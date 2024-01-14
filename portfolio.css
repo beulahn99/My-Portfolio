@@ -1,0 +1,291 @@
+/*
+    Name: Beulah Nwokotubo
+    File Name: portfolio.css
+    Date Created: 29 Oct 2023
+    Section: 331
+    Description: CSS code for html pages.
+*/
+
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 50pt;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #03061b;
+  color: #fff;
+}
+
+.container {
+  padding: 10px 10%;
+  justify-content: right;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  margin-right: 70px;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+nav ul li a:hover:after {
+  width: 100%;
+}
+
+nav .fa-solid {
+  display: none;
+}
+
+.rows {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.indeximg {
+  justify-content: right;
+  height: 50px;
+  margin-top: 40px;
+  position: relative;
+}
+
+.col-1 {
+  flex-basis: 50%;
+}
+
+.col-2 {
+  flex-basis: 35%;
+}
+
+.col-2.indeximg {
+  width: 100%;
+}
+
+.tab-titles {
+  display: flex;
+  margin: 5px 0 5px;
+}
+
+.tab-links {
+  margin: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-links::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+  width: 50%;
+}
+
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.tab-contents {
+  display: none;
+}
+
+.tab-contents.active-tab {
+  display: block;
+}
+
+.project-navigation {
+  justify-content: space-between;
+}
+
+footer {
+  font-size: small;
+  margin-top: 30px;
+  text-align: center;
+}
+
+/*--------contact---------*/
+
+.contact-left {
+  flex-basis: 35%;
+}
+
+.contact-right {
+  flex-basis: 60%;
+}
+
+.contact-left p {
+  margin-top: 30px;
+}
+
+.contact-left p i {
+  color: #ff004f;
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+.social-icons {
+  margin-top: 30px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #fff;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+  color: #ff004f;
+  transform: translateY(-5px);
+}
+
+.btn {
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid #ff004f;
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+  transition: background 0.5s;
+}
+
+.btn:hover {
+  background: #ff004f;
+}
+
+.btn.btn2 {
+  display: inline-block;
+  background: #ff004f;
+}
+
+.contact-right form {
+  width: 100%;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #262626;
+  padding: 15px;
+  margin: 15px 0;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+}
+
+/* ---project header--- */
+#project-header {
+  text-align: center;
+  font-size: 45px;
+}
+
+/* -----------css for small screen-----------*/
+@media only screen and (max-width: 600px) {
+  header h1 {
+    font-size: 20px;
+  }
+
+  nav .fa-solid {
+    display: block;
+    font-size: 25px;
+  }
+
+  nav ul {
+    background: #ff004f;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    max-width: 25px;
+  }
+
+  nav ul .fa-solid {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+
+  .col-1,
+  .col-2 {
+    flex-basis: 100%;
+  }
+
+  .col-1 {
+    margin-bottom: 30px;
+  }
+
+  .col-1 {
+    font-size: 14px;
+  }
+
+  .contact-left {
+    flex-basis: 100%;
+  }
+
+  .contact-right {
+    flex-basis: 100%;
+  }
+}
